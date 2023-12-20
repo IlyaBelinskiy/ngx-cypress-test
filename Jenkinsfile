@@ -11,7 +11,6 @@ pipeline {
             steps {
                 echo 'Building the application'
                 bat "npm install --force"
-                bat "npm start"
             }
         }
         stage('cypress parallel tests') {
