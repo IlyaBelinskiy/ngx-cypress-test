@@ -4,6 +4,7 @@ module.exports = defineConfig({
   viewportHeight: 1080,
   viewportWidth: 1920,
   video: true,
+  includeShadowDom: true,
   projectId: "9tz3j8",
   e2e: {
     baseUrl: 'http://localhost:4200',
