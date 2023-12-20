@@ -2,6 +2,8 @@ pipeline {
 
     agent any
 
+    tools{nodejs "node"}
+
     options {
         ansiColor('xterm')
     }
@@ -21,9 +23,9 @@ pipeline {
                     }
                 }
             
-            stage('tester B') {
-                agent{
-                    label: 'windows'
+                stage('tester B') {
+                    agent{
+                        label: 'win-pc'
                 }
                     steps {
                         bat "npm run cy:run"
