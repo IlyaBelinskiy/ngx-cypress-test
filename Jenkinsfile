@@ -2,8 +2,6 @@ pipeline {
 
     agent any
 
-    tools{nodejs "node"}
-
     options {
         ansiColor('xterm')
     }
@@ -24,7 +22,7 @@ pipeline {
                 }
             
                 stage('tester B') {
-                    agent{
+                    agent {
                         label: 'win-pc'
                 }
                     steps {
