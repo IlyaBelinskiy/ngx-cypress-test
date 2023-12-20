@@ -3,7 +3,7 @@ const { defineConfig } = require('cypress')
 module.exports = defineConfig({
   viewportHeight: 1080,
   viewportWidth: 1920,
-  video: false,
+  video: true,
   projectId: "9tz3j8",
   e2e: {
     baseUrl: 'http://localhost:4200',
