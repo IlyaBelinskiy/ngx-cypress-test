@@ -10,6 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application'
+                bat "npm install --force"
             }
         }
         stage('cypress parallel tests') {
