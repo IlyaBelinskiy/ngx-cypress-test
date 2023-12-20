@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build and start Web application') {
             steps {
-                echo 'Start the WEB application'
+                echo 'Build and start the WEB application'
                 bat 'npm install --force'
                 bat 'npm start'
             }
@@ -17,6 +17,12 @@ pipeline {
         stage('cypress parallel tests') {
             parallel {
                 stage('tester A') {
+                    steps {
+                        bat 'npm run cy:run'
+                    }
+                }
+
+                stage('tester A_1') {
                     steps {
                         bat 'npm run cy:run'
                     }
@@ -34,7 +40,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploy the application'
+                echo 'Deploy the WEB application'
             }
         }
     }
