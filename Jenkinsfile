@@ -23,7 +23,7 @@ pipeline {
             
                 stage('tester B') {
                     agent {
-                        label 'win10-pc'
+                        label 'win-pc'
                 }
                     steps {
                         bat "npm run cy:run"
